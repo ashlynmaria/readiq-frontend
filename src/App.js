@@ -3,6 +3,7 @@ import Register from "./pages/Register";
 import Login from "./pages/Login";
 import Dashboard from "./pages/Dashboard";
 import ProfileEdit from "./pages/ProfileEdit";
+import StudentsList from "./pages/StudentsList";
 
 function App() {
   return (
@@ -21,6 +22,8 @@ function App() {
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="*" element={<Register />} />
           <Route path="/edit-profile" element={<ProfileEdit />} /> 
+          <Route path="/students" element={<StudentsList />} />
+
         </Routes>
       </div>
     </BrowserRouter>
