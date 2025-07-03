@@ -1,24 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
+import Register from "./pages/Register";
+import Login from "./pages/Login";
+import Dashboard from "./pages/Dashboard";
+import ProfileEdit from "./pages/ProfileEdit";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <div className="p-4">
+        <nav className="mb-4">
+          <Link to="/" className="text-blue-600 mr-4">Home</Link>
+          <Link to="/register" className="text-blue-600">Register</Link>
+        </nav>
+        <Routes>
+          <Route path="/" element={
+            <h1 className="text-3xl font-bold text-center">Welcome to ReadIQ</h1>
+          } />
+          <Route path="/register" element={<Register />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="*" element={<Register />} />
+          <Route path="/edit-profile" element={<ProfileEdit />} /> 
+        </Routes>
+      </div>
+    </BrowserRouter>
   );
 }
 
