@@ -4,6 +4,7 @@ import Login from "./pages/Login";
 import Dashboard from "./pages/Dashboard";
 import ProfileEdit from "./pages/ProfileEdit";
 import StudentsList from "./pages/StudentsList";
+import EditStudent from "./pages/EditStudent";
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
           <Route path="*" element={<Register />} />
           <Route path="/edit-profile" element={<ProfileEdit />} /> 
           <Route path="/students" element={<StudentsList />} />
+          <Route path="/edit-student/:student_id" element={<EditStudent />} />
 
         </Routes>
       </div>
