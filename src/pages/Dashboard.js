@@ -165,6 +165,25 @@ export default function Dashboard() {
               <span style={styles.buttonIcon}>🚪</span>
               Logout
             </button>
+            <button
+              style={styles.btnPrimary}
+              onClick={() => navigate("/upload-reader")}
+              onMouseOver={(e) => e.target.style.backgroundColor = '#2c5282'}
+              onMouseOut={(e) => e.target.style.backgroundColor = '#3182ce'}
+            >
+              <span style={styles.buttonIcon}>📤</span>
+              Upload Reading File
+            </button>
+
+            <button
+              style={styles.btnSecondary}
+              onClick={() => navigate("/read-text")}
+              onMouseOver={(e) => e.target.style.backgroundColor = '#e2e8f0'}
+              onMouseOut={(e) => e.target.style.backgroundColor = '#f0ede6'}
+            >
+              <span style={styles.buttonIcon}>📖</span>
+              Start Reading
+            </button>
           </div>
         </div>
       </main>

@@ -5,6 +5,8 @@ import Dashboard from "./pages/Dashboard";
 import ProfileEdit from "./pages/ProfileEdit";
 import StudentsList from "./pages/StudentsList";
 import EditStudent from "./pages/EditStudent";
+import UploadReader from "./pages/UploadReader";
+import ReadText from "./pages/ReadText";
 
 function App() {
   return (
@@ -25,6 +27,9 @@ function App() {
           <Route path="/edit-profile" element={<ProfileEdit />} /> 
           <Route path="/students" element={<StudentsList />} />
           <Route path="/edit-student/:student_id" element={<EditStudent />} />
+          <Route path="/upload-reader" element={<UploadReader />} /> 
+          <Route path="/read-text" element={<ReadText />} />          
+          <Route path="*" element={<Register />} />
 
         </Routes>
       </div>
